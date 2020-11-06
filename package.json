@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nodemon server.js",
-    "start:prod": "NODE_ENV=production nodemon server.js"
+    "start:prod": "SET NODE_ENV=production & nodemon server.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
