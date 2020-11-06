@@ -1,0 +1,29 @@
+[
+  {
+    "name": "Macbook Pro 13' 2020",
+    "description": "10th-generation quad-core Intel Core i7 processor",
+    "category": "5fa4b344d031cb332ccb7dea",
+    "imageCover": "http://pngimg.com/uploads/macbook/macbook_PNG82.png",
+    "images": ["http://pngimg.com/uploads/macbook/macbook_PNG74.png"],
+    "quantity": 5,
+    "price": 65000
+  },
+  {
+    "name": "Lenovo Thinkpad 13' 2020",
+    "description": "8th-generation quad-core Intel Core i7 processor",
+    "category": "5fa4b344d031cb332ccb7dea",
+    "imageCover": "http://pngimg.com/uploads/laptop/laptop_PNG5936.png",
+    "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
+    "quantity": 10,
+    "price": 45000
+  },
+  {
+    "name": "Razer Blade 15",
+    "description": "8th-generation quad-core Intel Core i7 processor",
+    "category": "5fa4b344d031cb332ccb7dea",
+    "imageCover": "https://press.razer.com/wp-content/uploads/2019/01/blade-1024x576.png",
+    "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
+    "quantity": 10,
+    "price": 45000
+  }
+]

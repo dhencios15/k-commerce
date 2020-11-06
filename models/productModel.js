@@ -17,10 +17,6 @@ const productSchema = new Schema({
     ],
   },
   slug: String,
-  brand: {
-    type: String,
-    required: [true, 'A Product must have a brand'],
-  },
   description: {
     type: String,
     required: [true, 'A Product must have a description'],
@@ -41,7 +37,7 @@ const productSchema = new Schema({
   },
   imageCover: {
     type: String,
-    // required: [true, 'A Product must have a cover image'],
+    required: [true, 'A Product must have a cover image'],
   },
   images: [String],
   createdAt: {
