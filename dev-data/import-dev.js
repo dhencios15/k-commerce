@@ -5,7 +5,7 @@ const Product = require('../models/productModel');
 const User = require('../models/userModel');
 const Category = require('../models/categoryModel');
 
-dotenv.config({ path: './config.env' });
+dotenv.config();
 
 const DB_URI = process.env.DB_URI_LOCAL;
 
@@ -22,17 +22,17 @@ mongoose
 const products = JSON.parse(
   fs.readFileSync(`${__dirname}/products.json`, 'utf-8')
 );
-const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
-const category = JSON.parse(
-  fs.readFileSync(`${__dirname}/category.json`, 'utf-8')
-);
+// const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
+// const category = JSON.parse(
+//   fs.readFileSync(`${__dirname}/category.json`, 'utf-8')
+// );
 
 // IMPORT DATA INTO DB
 const importData = async () => {
   try {
-    await Category.create(category);
+    // await Category.create(category);
     await Product.create(products);
-    await User.create(users, { validateBeforeSave: false });
+    // await User.create(users, { validateBeforeSave: false });
     console.log('Data successfully loaded!');
   } catch (err) {
     console.log(err);
@@ -43,9 +43,9 @@ const importData = async () => {
 // DELETE ALL DATA FROM DB
 const deleteData = async () => {
   try {
-    await Tour.deleteMany();
-    await User.deleteMany();
-    await Review.deleteMany();
+    await Product.deleteMany();
+    // await User.deleteMany();
+    // await Review.deleteMany();
     console.log('Data successfully deleted!');
   } catch (err) {
     console.log(err);

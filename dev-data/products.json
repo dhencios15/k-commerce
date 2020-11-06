@@ -1,6 +1,6 @@
 [
   {
-    "name": "Macbook Pro 13' 2020",
+    "name": "Macbook Pro 13' 2019",
     "description": "10th-generation quad-core Intel Core i7 processor",
     "category": "5fa4b344d031cb332ccb7dea",
     "imageCover": "http://pngimg.com/uploads/macbook/macbook_PNG82.png",
@@ -25,5 +25,295 @@
     "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
     "quantity": 10,
     "price": 45000
+  },
+  {
+    "name": "Brown Brim",
+    "description": "Brown Brim",
+    "category": "5fa4b344d031cb332ccb7dea",
+    "imageCover": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+    "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
+    "quantity": 10,
+    "price": 45000
+  },
+  {
+    "name": "Camo Down Vest",
+    "description": "Camo Down Vest",
+    "category": "5fa550bd621bbe358cc723ca",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/xJS0T3Y/camo-vest.png",
+    "price": 325
+  },
+  {
+    "name": "Floral T-shirt",
+    "description": "Floral T-shirt",
+    "category": "5fa550bd621bbe358cc723ca",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/qMQ75QZ/floral-shirt.png",
+    "price": 20
+  },
+  {
+    "name": "Black & White Longsleeve",
+    "description": "Black & White Longsleeve",
+    "category": "5fa550bd621bbe358cc723ca",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/55z32tw/long-sleeve.png",
+    "price": 25
+  },
+  {
+    "name": "Pink T-shirt",
+    "description": "Pink T-shirt",
+    "category": "5fa550bd621bbe358cc723ca",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/RvwnBL8/pink-shirt.png",
+    "price": 25
+  },
+  {
+    "name": "Jean Long Sleeve",
+    "description": "Jean Long Sleeve",
+    "category": "5fa550bd621bbe358cc723ca",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png",
+    "price": 40
+  },
+  {
+    "name": "Burgundy T-shirt",
+    "description": "Burgundy T-shirt",
+    "category": "5fa550bd621bbe358cc723ca",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/mh3VM1f/polka-dot-shirt.png",
+    "price": 25
+  },
+  {
+    "name": "Blue Tanktop",
+    "description": "Blue Tanktop",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/7CQVJNm/blue-tank.png",
+    "price": 25
+  },
+  {
+    "name": "Floral Blouse",
+    "description": "Floral Blouse",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/4W2DGKm/floral-blouse.png",
+    "price": 20
+  },
+  {
+    "name": "Floral Dress",
+    "description": "Floral Dress",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/KV18Ysr/floral-skirt.png",
+    "price": 80
+  },
+  {
+    "name": "Red Dots Dress",
+    "description": "Red Dots Dress",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png",
+    "price": 80
+  },
+  {
+    "name": "Striped Sweater",
+    "description": "Striped Sweater",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/KmSkMbH/striped-sweater.png",
+    "price": 45
+  },
+  {
+    "name": "Yellow Track Suit",
+    "description": "Yellow Track Suit",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/v1cvwNf/yellow-track-suit.png",
+    "price": 135
+  },
+  {
+    "name": "White Blouse",
+    "description": "White Blouse",
+    "category": "5fa550b7621bbe358cc723c9",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/qBcrsJg/white-vest.png",
+    "price": 20
+  },
+  {
+    "name": "Black Jean Shearling",
+    "description": "Black Jean Shearling",
+    "category": "5fa550b1621bbe358cc723c8",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/XzcwL5s/black-shearling.png",
+    "price": 125
+  },
+  {
+    "name": "Blue Jean Jacket",
+    "description": "Blue Jean Jacket",
+    "category": "5fa550b1621bbe358cc723c8",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/mJS6vz0/blue-jean-jacket.png",
+    "price": 90
+  },
+  {
+    "name": "Grey Jean Jacket",
+    "description": "Grey Jean Jacket",
+    "category": "5fa550b1621bbe358cc723c8",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/N71k1ML/grey-jean-jacket.png",
+    "price": 90
+  },
+  {
+    "name": "Brown Shearling",
+    "description": "Brown Shearling",
+    "category": "5fa550b1621bbe358cc723c8",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/s96FpdP/brown-shearling.png",
+    "price": 165
+  },
+  {
+    "name": "Tan Trench",
+    "description": "Tan Trench",
+    "category": "5fa550b1621bbe358cc723c8",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/M6hHc3F/brown-trench.png",
+    "price": 185
+  },
+  {
+    "name": "Adidas NMD",
+    "description": "Adidas NMD",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 2,
+    "imageCover": "https://i.ibb.co/0s3pdnc/adidas-nmd.png",
+    "price": 220
+  },
+  {
+    "name": "Adidas Yeezy",
+    "description": "Adidas Yeezy",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 3,
+    "imageCover": "https://i.ibb.co/dJbG1cT/yeezy.png",
+    "price": 280
+  },
+  {
+    "name": "Black Converse",
+    "description": "Black Converse",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/bPmVXyP/black-converse.png",
+    "price": 110
+  },
+  {
+    "name": "Nike White AirForce",
+    "description": "Nike White AirForce",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/1RcFPk0/white-nike-high-tops.png",
+    "price": 160
+  },
+  {
+    "name": "Nike Red High Tops",
+    "description": "Nike Red High Tops",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/QcvzydB/nikes-red.png",
+    "price": 160
+  },
+  {
+    "name": "Nike Brown High Tops",
+    "description": "Nike Brown High Tops",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/fMTV342/nike-brown.png",
+    "price": 160
+  },
+  {
+    "name": "Air Jordan Limited",
+    "description": "Air Jordan Limited",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/w4k6Ws9/nike-funky.png",
+    "price": 190
+  },
+  {
+    "name": "Timberlands",
+    "description": "Timberlands",
+    "category": "5fa550a8621bbe358cc723c7",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/Mhh6wBg/timberlands.png",
+    "price": 200
+  },
+  {
+    "name": "Brown 2 Brim",
+    "description": "Brown Brim",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
+    "price": 25
+  },
+  {
+    "name": "Blue Beanie",
+    "description": "Blue Beanie",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/ypkgK0X/blue-beanie.png",
+    "price": 18
+  },
+  {
+    "name": "Brown Cowboy",
+    "description": "Brown Cowboy",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/QdJwgmp/brown-cowboy.png",
+    "price": 35
+  },
+  {
+    "name": "Grey Brim Oscar",
+    "description": "Grey Brim",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/RjBLWxB/grey-brim.png",
+    "price": 25
+  },
+  {
+    "name": "Green Beanie",
+    "description": "Green Beanie",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/YTjW3vF/green-beanie.png",
+    "price": 18
+  },
+  {
+    "name": "Palm Tree Cap",
+    "description": "Palm Tree Cap",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/rKBDvJX/palm-tree-cap.png",
+    "price": 14
+  },
+  {
+    "name": "Red Beanie",
+    "description": "Red Beanie",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/bLB646Z/red-beanie.png",
+    "price": 18
+  },
+  {
+    "name": "Wolf Cap",
+    "description": "Wolf Cap",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/1f2nWMM/wolf-cap.png",
+    "price": 14
+  },
+  {
+    "name": "Blue Snapback",
+    "description": "Blue Snapback",
+    "category": "5fa5509c621bbe358cc723c6",
+    "quantity": 10,
+    "imageCover": "https://i.ibb.co/X2VJP2W/blue-snapback.png",
+    "price": 16
   }
+  
 ]
