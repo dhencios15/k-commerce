@@ -1,0 +1,53 @@
+{
+  "name": "natours-clone",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@emotion/styled": "^10.0.27",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "@windmill/react-ui": "^0.3.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "3.4.3",
+    "twin.macro": "^1.10.0"
+  },
+  "scripts": {
+    "build:tailwind": "tailwind build src/assets/css/tailwind.css -o src/assets/css/main.css",
+    "watch:tailwind": "chokidar 'src/**/**/*.css' 'src/**/**/*.scss' --ignore src/assets/css/main.css -c 'npm run build:tailwind'",
+    "start": "npm-run-all build:tailwind --parallel watch:tailwind start:react",
+    "start:react": "react-scripts start",
+    "prebuild": "npm run build:tailwind",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "chokidar-cli": "^2.1.0",
+    "npm-run-all": "^4.1.5",
+    "tailwindcss": "^1.8.11"
+  },
+  "babelMacros": {
+    "twin": {
+      "config": "src/tailwind.config.js"
+    }
+  },
+  "proxy": "http://localhost:3001/api/v1"
+}
