@@ -17,6 +17,10 @@ const productSchema = new Schema({
     ],
   },
   slug: String,
+  brand: {
+    type: String,
+    required: [true, 'A Product must have a brand'],
+  },
   description: {
     type: String,
     required: [true, 'A Product must have a description'],
