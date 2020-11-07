@@ -114,3 +114,5 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+app/src/assets/css/tailwind.output.css

@@ -1,14 +1,32 @@
-import React from 'react';
-import tw from 'twin.macro';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-const AppContainer = tw.div`bg-gray-900 py-4 px-6`;
-const MyHeading = tw.h1`text-gray-300 text-2xl`;
+import { ReactQueryDevtools } from 'react-query-devtools';
+import 'assets/css/tailwind.output.css';
+
+import Navbar from 'components/Navbar';
+import Home from 'pages/Home';
+import Footer from 'components/Footer';
+import Hero from 'components/Hero';
+
+const fetchDevTools = process.env.NODE_ENV === 'development' && (
+  <ReactQueryDevtools initialIsOpen />
+);
 
 function App() {
   return (
-    <AppContainer>
-      <MyHeading>DHENCIOSS</MyHeading>
-    </AppContainer>
+    <div className='bg-gray-100 min-h-screen'>
+      <div className='container mx-auto'>
+        <Router>
+          <Navbar />
+          <Hero />
+          <Switch>
+            <Route exact path='/' component={Home} />
+          </Switch>
+        </Router>
+        {fetchDevTools}
+        <Footer />
+      </div>
+    </div>
   );
 }
 

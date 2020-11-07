@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Windmill } from '@windmill/react-ui';
-
-import 'assets/css/main.css';
+import { QueryCache, ReactQueryCacheProvider } from 'react-query';
 
 import App from './App';
 
+const queryCache = new QueryCache({
+  defaultConfig: {
+    queries: {
+      refetchOnWindowFocus: false,
+    },
+  },
+});
+
 ReactDOM.render(
-  <Windmill usePreferences>
-    <App />
-  </Windmill>,
+  <ReactQueryCacheProvider queryCache={queryCache}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </ReactQueryCacheProvider>,
   document.getElementById('root')
 );
