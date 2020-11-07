@@ -1,8 +1,9 @@
 import useCategory from 'hooks/useCategory';
 import HeroBg from 'assets/images/hero.jpg';
+import { CategorySkeleton } from 'components/Skelton';
 
 const Hero = () => {
-  const { data: categories } = useCategory();
+  const { data: categories, isLoading } = useCategory();
 
   const categoryList = ({ _id, name }) => {
     return (
@@ -20,11 +21,15 @@ const Hero = () => {
       <div className='hidden md:block w-1/4 text-center'>
         <ul className='flex flex-col space-y-10 mt-10'>
           {categoryList({ _id: 'All101', name: 'All' })}
-          {categories?.map((category) => categoryList(category))}
+          {isLoading ? (
+            <CategorySkeleton />
+          ) : (
+            categories?.map((category) => categoryList(category))
+          )}
         </ul>
       </div>
       <div
-        className='w-full bg-cover bg-top shadow-lg rounded-lg'
+        className='w-full bg-cover bg-top shadow-lg md:rounded-lg'
         style={{ backgroundImage: `url(${HeroBg})` }}
       />
     </div>

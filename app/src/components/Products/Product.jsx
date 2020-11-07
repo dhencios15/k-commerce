@@ -1,4 +1,4 @@
-import { memo, useCallback } from 'react';
+import { useCallback } from 'react';
 import { useHistory } from 'react-router-dom';
 
 const Product = ({ product }) => {
@@ -13,7 +13,7 @@ const Product = ({ product }) => {
     <div className='lg:w-1/4 md:w-1/2 p-4 w-full'>
       <div
         onClick={onNavigate}
-        className='transform duration-300 hover:scale-105 shadow-md p-4'
+        className='transform duration-500 hover:scale-105 shadow-md p-4'
       >
         <div className='block relative h-48 rounded overflow-hidden'>
           <img
@@ -29,11 +29,11 @@ const Product = ({ product }) => {
           <h2 className='text-gray-900 title-font text-lg font-medium'>
             {product.name}
           </h2>
-          <p className='mt-1'>₱{product.price}</p>
+          <p className='mt-1 text-hot-pink'>₱{product.price}</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default memo(Product);
+export default Product;

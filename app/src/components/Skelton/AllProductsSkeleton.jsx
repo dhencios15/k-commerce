@@ -15,7 +15,7 @@ const AllProductsSkeleton = () => {
                   />
                 </div>
                 <div className='mt-4 space-y-4'>
-                  <div className='h-4 bg-gray-400 rounded w-3/6'></div>
+                  <div className='h-4 bg-gray-400 rounded w-full'></div>
                   <div className='h-4 bg-gray-400 rounded w-5/6'></div>
                   <div className='h-4 bg-gray-400 rounded w-3/12'></div>
                 </div>
