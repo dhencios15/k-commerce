@@ -5,6 +5,7 @@ import { SearchIcon, ShoppingBag } from 'icons/index';
 
 const Navbar = () => {
   const [cartCount] = useState(2);
+
   return (
     <nav className='flex justify-between md:justify-around items-center py-4 px-6 text-black'>
       <div>

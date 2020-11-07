@@ -21,6 +21,8 @@ module.exports = {
       },
     },
   },
-  variants: {},
+  variants: {
+    zIndex: ['hover'],
+  },
   plugins: [],
 };
