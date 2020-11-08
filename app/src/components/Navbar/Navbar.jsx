@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className='flex justify-between md:justify-around items-center py-4 px-6 text-black'>
       <div>
         <Link to='/' className='font-bold text-2xl italic tracking-widest'>
-          Kamahal<span className='ml-1 text-hot-pink'>!</span>
+          Kamàhal<span className='ml-1 text-hot-pink'>!</span>
         </Link>
       </div>
 

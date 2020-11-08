@@ -1,7 +1,7 @@
 import useCategory from 'hooks/useCategory';
 import HeroBg from 'assets/images/hero.jpg';
-import { CategorySkeleton } from 'components/Skelton';
 
+import { CategorySkeleton } from 'components/Skelton';
 const Hero = () => {
   const { data: categories, isLoading } = useCategory();
 

@@ -20,7 +20,7 @@ function App() {
   return (
     <ReactQueryCacheProvider queryCache={queryCache}>
       <div className='bg-gray-100 min-h-screen'>
-        <div className='container mx-auto'>
+        <div className='container mx-auto space-y-6'>
           <RouteContainer />
           {fetchDevTools}
           <Footer />
