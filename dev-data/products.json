@@ -1,35 +1,8 @@
 [
   {
-    "name": "Macbook Pro 13' 2019",
-    "description": "10th-generation quad-core Intel Core i7 processor",
-    "category": "5fa4b344d031cb332ccb7dea",
-    "imageCover": "http://pngimg.com/uploads/macbook/macbook_PNG82.png",
-    "images": ["http://pngimg.com/uploads/macbook/macbook_PNG74.png"],
-    "quantity": 5,
-    "price": 65000
-  },
-  {
-    "name": "Lenovo Thinkpad 13' 2020",
-    "description": "8th-generation quad-core Intel Core i7 processor",
-    "category": "5fa4b344d031cb332ccb7dea",
-    "imageCover": "http://pngimg.com/uploads/laptop/laptop_PNG5936.png",
-    "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
-    "quantity": 10,
-    "price": 45000
-  },
-  {
-    "name": "Razer Blade 15",
-    "description": "8th-generation quad-core Intel Core i7 processor",
-    "category": "5fa4b344d031cb332ccb7dea",
-    "imageCover": "https://press.razer.com/wp-content/uploads/2019/01/blade-1024x576.png",
-    "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
-    "quantity": 10,
-    "price": 45000
-  },
-  {
     "name": "Brown Brim",
     "description": "Brown Brim",
-    "category": "5fa4b344d031cb332ccb7dea",
+    "category": "5fa5509c621bbe358cc723c6",
     "imageCover": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
     "images": ["http://pngimg.com/uploads/laptop/laptop_PNG5936.png"],
     "quantity": 10,
@@ -242,14 +215,6 @@
     "quantity": 10,
     "imageCover": "https://i.ibb.co/Mhh6wBg/timberlands.png",
     "price": 200
-  },
-  {
-    "name": "Brown 2 Brim",
-    "description": "Brown Brim",
-    "category": "5fa5509c621bbe358cc723c6",
-    "quantity": 10,
-    "imageCover": "https://i.ibb.co/ZYW3VTp/brown-brim.png",
-    "price": 25
   },
   {
     "name": "Blue Beanie",

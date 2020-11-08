@@ -10,7 +10,7 @@ const Product = () => {
   const { pathname } = useLocation();
 
   const { slug } = useParams();
-  const { data: product, isLoading } = useProduct(slug);
+  const { data: product, isLoading, isError } = useProduct(slug);
   const { data: products, isLoading: isRelatedProductsLoading } = useProducts();
 
   useEffect(() => {
@@ -20,15 +20,19 @@ const Product = () => {
   return (
     <section className='text-gray-700 body-font overflow-hidden'>
       <div className='container px-5 pb-12 mx-auto'>
-        {isLoading ? <ProductSkeleton /> : <ProductDetails product={product} />}
+        {isLoading || !product || isError ? (
+          <ProductSkeleton />
+        ) : (
+          <ProductDetails product={product.data} />
+        )}
         <div className='mt-12'>
           <h1 className='font-bold text-2xl mb-2'>YOU MIGHT ALSO LIKE</h1>
-          {isRelatedProductsLoading || isLoading ? (
+          {isRelatedProductsLoading || isLoading || !product ? (
             <ProductsSkeleton />
           ) : (
             <ProductsContainer
               products={products}
-              filter={product.category.name}
+              filter={product.data.category.name}
             />
           )}
         </div>

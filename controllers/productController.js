@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const Product = require('../models/productModel');
+const AppError = require('../utils/appError');
 
 exports.getAllProducts = asyncHandler(async (req, res) => {
   const allProducts = await Product.find();
@@ -11,9 +12,12 @@ exports.getAllProducts = asyncHandler(async (req, res) => {
   });
 });
 
-exports.getProduct = asyncHandler(async (req, res) => {
+exports.getProduct = asyncHandler(async (req, res, next) => {
   const { slug } = req.params;
   const product = await Product.findOne({ slug });
+
+  if (!product) return next(new AppError('No Product Found!', 404));
+
   res.status(200).json({
     status: 'success',
     data: product,

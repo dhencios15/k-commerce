@@ -2,17 +2,19 @@ import useCategory from 'hooks/useCategory';
 import HeroBg from 'assets/images/hero.jpg';
 
 import { CategorySkeleton } from 'components/Skelton';
+import { Link } from 'react-router-dom';
 const Hero = () => {
   const { data: categories, isLoading } = useCategory();
 
   const categoryList = ({ _id, name }) => {
     return (
-      <li
+      <Link
+        to={`/shop/${name}`}
         className='tracking-wider font-bold cursor-pointer italic transform hover:scale-125 transition duration-700 ease-in-out'
         key={_id}
       >
         {name}
-      </li>
+      </Link>
     );
   };
 
@@ -31,7 +33,9 @@ const Hero = () => {
       <div
         className='w-full bg-cover bg-top shadow-lg md:rounded-lg'
         style={{ backgroundImage: `url(${HeroBg})` }}
-      />
+      >
+        <img src='' alt='' />
+      </div>
     </div>
   );
 };

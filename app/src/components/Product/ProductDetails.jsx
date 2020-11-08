@@ -1,5 +1,3 @@
-import React from 'react';
-
 const ProductDetails = ({ product }) => {
   return (
     <div className='lg:w-4/5 mx-auto flex flex-wrap'>
@@ -122,14 +120,21 @@ const ProductDetails = ({ product }) => {
             <button className='border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none'></button>
           </div>
           <div className='flex ml-6 items-center'>
-            <span className='mr-3'>Size</span>
+            <span className='mr-3'>Quantity</span>
             <div className='relative'>
-              <select className='rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-indigo-500 text-base pl-3 pr-10'>
-                <option>SM</option>
-                <option>M</option>
-                <option>L</option>
-                <option>XL</option>
-              </select>
+              {product.quantity > 0 ? (
+                <input
+                  className='rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-indigo-500 text-base px-2'
+                  type='number'
+                  name='quantity'
+                  min='1'
+                  max={product.quantity}
+                  defaultValue='1'
+                  onKeyPress={(e) => e.preventDefault()}
+                ></input>
+              ) : (
+                <span className='text-red-600'>Out of Stock</span>
+              )}
               <span className='absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center'>
                 <svg
                   fill='none'

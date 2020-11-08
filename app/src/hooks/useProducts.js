@@ -14,7 +14,7 @@ export function useProduct(slug) {
   return useQuery(`product-${slug}`, () =>
     axios
       .get(`/products/${slug}`)
-      .then((res) => res.data.data)
+      .then((res) => res.data)
       .catch((err) => err.res)
   );
 }

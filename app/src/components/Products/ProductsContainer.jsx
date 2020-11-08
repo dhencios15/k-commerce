@@ -1,11 +1,13 @@
 import { memo, useMemo } from 'react';
 import Product from './Product';
-const ProductsContainer = ({ products, limit = 12, filter = null }) => {
+const ProductsContainer = ({ products, limit = 12, filter = 'All' }) => {
   const filteredProducts = useMemo(() => {
     if (filter) {
-      return products.filter((prod) => prod.category.name === filter);
-    } else {
-      return products;
+      if (filter === 'All') {
+        return products;
+      } else {
+        return products.filter((prod) => prod.category.name === filter);
+      }
     }
   }, [products, filter]);
 
@@ -15,7 +17,7 @@ const ProductsContainer = ({ products, limit = 12, filter = null }) => {
         <div className='flex flex-wrap -m-4'>
           {filteredProducts &&
             filteredProducts
-              .slice(0, limit)
+              .slice(0, limit ?? products.length)
               .map((product) => (
                 <Product key={product._id} product={product} />
               ))}
