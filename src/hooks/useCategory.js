@@ -1,10 +1,9 @@
 import { useQuery } from 'react-query';
-import axios from 'axios';
+import Api from 'services/Api';
 
 export default function useCategory() {
   return useQuery('category', () =>
-    axios
-      .get('/category')
+    Api.get('/category')
       .then((res) => res.data.data)
       .catch((err) => err.res)
   );
