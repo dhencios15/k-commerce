@@ -37,7 +37,7 @@ const Navbar = () => {
         </li>
         <li className='tracking-wider font-bold cursor-pointer'>
           <Link to='/signin' className='hover:text-gray-500'>
-            SIGN IN
+            LOG IN
           </Link>
         </li>
       </ul>

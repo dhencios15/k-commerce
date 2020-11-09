@@ -1,5 +1,10 @@
 import axios from 'axios';
 
+const DB_URI =
+  process.env.NODE_ENV === 'production'
+    ? process.env.REACT_APP_PROD_URL
+    : process.env.REACT_APP_DEV_URL;
+
 export default axios.create({
-  baseURL: 'https://kamahal.herokuapp.com/api/v1',
+  baseURL: DB_URI,
 });
