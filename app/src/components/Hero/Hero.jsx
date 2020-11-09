@@ -1,40 +1,18 @@
-import useCategory from 'hooks/useCategory';
 import HeroBg from 'assets/images/hero.jpg';
+import Categories from 'components/Categories';
+import { KLogoIcon } from 'icons';
 
-import { CategorySkeleton } from 'components/Skelton';
-import { Link } from 'react-router-dom';
 const Hero = () => {
-  const { data: categories, isLoading } = useCategory();
-
-  const categoryList = ({ _id, name }) => {
-    return (
-      <Link
-        to={`/shop/${name}`}
-        className='tracking-wider font-bold cursor-pointer italic transform hover:scale-125 transition duration-700 ease-in-out'
-        key={_id}
-      >
-        {name}
-      </Link>
-    );
-  };
-
   return (
     <div className='h-screen/2 flex justify-center'>
       <div className='hidden md:block w-1/4 text-center'>
-        <ul className='flex flex-col space-y-10 mt-10'>
-          {categoryList({ _id: 'All101', name: 'All' })}
-          {isLoading ? (
-            <CategorySkeleton />
-          ) : (
-            categories?.map((category) => categoryList(category))
-          )}
-        </ul>
+        <Categories />
       </div>
       <div
-        className='w-full bg-cover bg-top shadow-lg md:rounded-lg'
+        className='w-full flex justify-center items-center bg-cover bg-top shadow-xl md:rounded-lg'
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
-        <img src='' alt='' />
+        <KLogoIcon className='h-12 w-12 shadow-lg opacity-75' />
       </div>
     </div>
   );
