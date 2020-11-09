@@ -1,8 +1,22 @@
 [
   {
-    "name": "Laptop"
+    "_id": "5fa5509c621bbe358cc723c6",
+    "name": "Hats"
   },
   {
-    "name": "Mobile"
+    "_id": "5fa550a8621bbe358cc723c7",
+    "name": "Sneakers"
+  },
+  {
+    "_id": "5fa550b1621bbe358cc723c8",
+    "name": "Jackets"
+  },
+  {
+    "_id": "5fa550b7621bbe358cc723c9",
+    "name": "Womens"
+  },
+  {
+    "_id": "5fa550bd621bbe358cc723ca",
+    "name": "Mens"
   }
 ]

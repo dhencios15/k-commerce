@@ -11,10 +11,7 @@ const productSchema = new Schema({
       40,
       'A Product name must have less or equal then 40 characters',
     ],
-    minlength: [
-      10,
-      'A Product name must have more or equal then 10 characters',
-    ],
+    minlength: [8, 'A Product name must have more or equal then 10 characters'],
   },
   slug: String,
   description: {

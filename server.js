@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const app = require('./app');
 
-const DB_URI = process.env.DB_URI_LOCAL;
+const DB_URI = process.env.DB_PROD;
 const PORT = process.env.PORT || 3001;
 
 mongoose
