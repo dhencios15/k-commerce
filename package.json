@@ -5,7 +5,8 @@
   "author": "dhencios15 <ddelacruz@umindanao.edu.ph>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node server.js",
+    "start:dev": "nodemon server.js",
     "start:prod": "SET NODE_ENV=production & nodemon server.js"
   },
   "dependencies": {
