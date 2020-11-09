@@ -5,6 +5,9 @@ const DB_URI =
     ? process.env.REACT_APP_PROD_URL
     : process.env.REACT_APP_DEV_URL;
 
-export default axios.create({
-  baseURL: DB_URI,
-});
+// eslint-disable-next-line import/no-anonymous-default-export
+export default (token) =>
+  axios.create({
+    baseURL: DB_URI,
+    Authorization: `Bearer ${token}`,
+  });
