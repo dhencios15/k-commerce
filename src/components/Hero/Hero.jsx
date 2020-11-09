@@ -12,7 +12,7 @@ const Hero = () => {
         className='w-full flex justify-center items-center bg-cover bg-top shadow-xl md:rounded-lg'
         style={{ backgroundImage: `url(${HeroBg})` }}
       >
-        <KLogoIcon className='h-12 w-12 shadow-lg opacity-75' />
+        <KLogoIcon className='h-12 w-12 shadow-lg opacity-50' />
       </div>
     </div>
   );

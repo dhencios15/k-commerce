@@ -3,17 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@hookform/resolvers": "^1.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@windmill/react-ui": "^0.4.1",
     "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.11.0",
     "react-query": "^2.26.2",
+    "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.0",
-    "web-vitals": "^0.2.4"
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.1.3",
+    "reselect": "^4.0.0",
+    "web-vitals": "^0.2.4",
+    "yup": "^0.29.3"
   },
+  "keywords": [
+    "reactjs",
+    "tailwindcss",
+    "mern",
+    "nodejs"
+  ],
   "scripts": {
     "build:tailwind": "tailwind build src/assets/css/tailwind.css -o src/assets/css/tailwind.output.css",
     "watch:tailwind": "chokidar 'src/**/**/*.css' 'src/**/**/*.scss' --ignore src/assets/css/tailwind.output.css -c 'npm run build:tailwind'",

@@ -13,6 +13,7 @@ const queryCache = new QueryCache({
     },
   },
 });
+
 const fetchDevTools = process.env.NODE_ENV === 'development' && (
   <ReactQueryDevtools initialIsOpen />
 );

@@ -33,6 +33,7 @@ const Product = () => {
             <ProductsContainer
               products={products}
               filter={product.data.category.name}
+              name={product.data.name}
             />
           )}
         </div>

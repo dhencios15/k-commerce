@@ -2,22 +2,22 @@ import { Link, useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useDispatch, useSelector } from 'react-redux';
-import { signUpSchema } from 'utils/AuthValidation';
+import { loginSchema } from 'utils/AuthValidation';
 
 import BaseInput from 'components/Shared/BaseInput';
 import BaseButton from 'components/Shared/BaseButton';
-import { signUp, authError } from 'store/actions/authActions';
+import { authError, logIn } from 'store/actions/authActions';
 import { selectCurrentUser } from 'store/selector/authSelector';
 import { useEffect } from 'react';
 import { appStatus } from 'store/selector/appSelector';
 
-const Signup = () => {
+const Signin = () => {
   const dispatch = useDispatch();
   const { push } = useHistory();
   const currentUser = useSelector((state) => selectCurrentUser(state));
   const { isLoading, error } = useSelector((state) => appStatus(state));
   const { register, handleSubmit, errors } = useForm({
-    resolver: yupResolver(signUpSchema),
+    resolver: yupResolver(loginSchema),
     mode: 'onBlur',
   });
 
@@ -28,7 +28,7 @@ const Signup = () => {
   }, [currentUser, push]);
 
   const onSubmit = (data) => {
-    dispatch(signUp(data));
+    dispatch(logIn(data));
   };
 
   return (
@@ -43,13 +43,6 @@ const Signup = () => {
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <BaseInput
-              errors={errors.name?.message || error}
-              name='name'
-              placeholder='Name'
-              register={register}
-              type='text'
-            />
-            <BaseInput
               errors={errors.email?.message || error}
               name='email'
               placeholder='Email'
@@ -63,25 +56,18 @@ const Signup = () => {
               register={register}
               type='password'
             />
-            <BaseInput
-              errors={errors.confirmPassword?.message || error}
-              name='confirmPassword'
-              placeholder='Confirm Password'
-              register={register}
-              type='password'
-            />
             <BaseButton
               disabled={isLoading}
               type='submit'
-              name={isLoading ? 'Signing up' : 'Sign up'}
+              name={isLoading ? 'Logging in' : 'Log in'}
             />
           </form>
           <Link
             onClick={() => dispatch(authError(null))}
-            to='/signin'
+            to='/signup'
             className='inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800 mt-2'
           >
-            Already have account ? Login
+            No Account? Sign up
           </Link>
         </div>
       </div>
@@ -89,4 +75,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default Signin;
