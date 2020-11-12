@@ -4,15 +4,17 @@ import { useState } from 'react';
 
 import { SearchIcon, ShoppingBag } from 'icons/index';
 import { selectCurrentUser } from 'store/selector/authSelector';
+import { navbarName } from 'utils/textDisplay';
 import { logOut } from 'store/actions/authActions';
 import { appStatus } from 'store/selector/appSelector';
+import { selectCartItemsCount } from 'store/selector/cartSelector';
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const dispatch = useDispatch();
   const currentUser = useSelector((state) => selectCurrentUser(state));
+  const cartCount = useSelector((state) => selectCartItemsCount(state));
   const { isLoading } = useSelector((state) => appStatus(state));
-  const [cartCount] = useState(2);
 
   const authLink = () => {
     return currentUser ? (
@@ -21,7 +23,7 @@ const Navbar = () => {
           onClick={() => setOpen(!isOpen)}
           className='flex justify-center items-center hover:text-gray-500 font-bold'
         >
-          {currentUser.name.toUpperCase()}
+          {navbarName(currentUser.name.toUpperCase())}
           <svg
             className='-mr-1 ml-2 h-5 w-5'
             xmlns='http://www.w3.org/2000/svg'
@@ -86,8 +88,9 @@ const Navbar = () => {
           <SearchIcon />
         </button>
       </div>
-      <div className='relative flex text-left'>
-        <div
+      <div className='relative flex text-left space-x-2'>
+        <Link
+          to='/cart'
           className={`flex ${cartCount && 'animate-pulse cursor-pointer mr-2'}`}
         >
           <ShoppingBag className='w-6 h-6 hover:text-gray-500' />
@@ -96,7 +99,7 @@ const Navbar = () => {
               {cartCount}
             </span>
           )}
-        </div>
+        </Link>
         {authLink()}
       </div>
     </nav>

@@ -1,6 +1,10 @@
+import ReactStars from 'react-rating-stars-component';
 import BaseButton from 'components/Shared/BaseButton';
+import useCart from 'hooks/useCart';
 
 const ProductDetails = ({ product }) => {
+  const { incQty } = useCart();
+
   return (
     <div className='lg:w-4/5 mx-auto flex flex-wrap'>
       <img
@@ -17,62 +21,15 @@ const ProductDetails = ({ product }) => {
         </h1>
         <div className='flex mb-4'>
           <span className='flex items-center'>
-            <svg
-              fill='currentColor'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='w-4 h-4 text-indigo-500'
-              viewBox='0 0 24 24'
-            >
-              <path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'></path>
-            </svg>
-            <svg
-              fill='currentColor'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='w-4 h-4 text-indigo-500'
-              viewBox='0 0 24 24'
-            >
-              <path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'></path>
-            </svg>
-            <svg
-              fill='currentColor'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='w-4 h-4 text-indigo-500'
-              viewBox='0 0 24 24'
-            >
-              <path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'></path>
-            </svg>
-            <svg
-              fill='currentColor'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='w-4 h-4 text-indigo-500'
-              viewBox='0 0 24 24'
-            >
-              <path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'></path>
-            </svg>
-            <svg
-              fill='none'
-              stroke='currentColor'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-              strokeWidth='2'
-              className='w-4 h-4 text-indigo-500'
-              viewBox='0 0 24 24'
-            >
-              <path d='M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z'></path>
-            </svg>
-            <span className='text-gray-600 ml-3'>4 Reviews</span>
+            <ReactStars
+              size={25}
+              value={product.averageRating}
+              edit={false}
+              activeColor='#87b9e8'
+            />
+            <span className='text-gray-600 ml-3'>
+              {product.ratingsQuantity} Reviews
+            </span>
           </span>
           <span className='flex ml-3 pl-3 py-2 border-l-2 border-gray-200'>
             <div className='text-gray-500'>
@@ -114,7 +71,7 @@ const ProductDetails = ({ product }) => {
           </span>
         </div>
         <p className='leading-relaxed'>{product.description}</p>
-        <div className='flex mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5'>
+        <div className='flex justify-between mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5'>
           <div className='flex'>
             <span className='mr-3'>Color</span>
             <button className='border-2 border-gray-300 rounded-full w-6 h-6 focus:outline-none'></button>
@@ -122,34 +79,15 @@ const ProductDetails = ({ product }) => {
             <button className='border-2 border-gray-300 ml-1 bg-indigo-500 rounded-full w-6 h-6 focus:outline-none'></button>
           </div>
           <div className='flex ml-6 items-center'>
-            <span className='mr-3'>Quantity</span>
+            <span className='mr-3'>Stock Left: </span>
             <div className='relative'>
               {product.quantity > 0 ? (
-                <input
-                  className='rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-indigo-500 text-base px-2'
-                  type='number'
-                  name='quantity'
-                  min='1'
-                  max={product.quantity}
-                  defaultValue='1'
-                  onKeyPress={(e) => e.preventDefault()}
-                ></input>
+                <div className='flex space-x-1'>
+                  <span>{product.quantity}</span>
+                </div>
               ) : (
                 <span className='text-red-600'>Out of Stock</span>
               )}
-              {/* <span className='absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center'>
-                <svg
-                  fill='none'
-                  stroke='currentColor'
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  className='w-4 h-4'
-                  viewBox='0 0 24 24'
-                >
-                  <path d='M6 9l6 6 6-6'></path>
-                </svg>
-              </span> */}
             </div>
           </div>
         </div>
@@ -157,7 +95,12 @@ const ProductDetails = ({ product }) => {
           <span className='title-font font-medium text-2xl text-hot-pink'>
             ₱{product.price}.00
           </span>
-          <BaseButton margin='ml-auto' name='Add to Cart' />
+          <BaseButton
+            onClick={() => incQty(product)}
+            type='submit'
+            margin='ml-auto'
+            name='Add to Cart'
+          />
           <button className='rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4'>
             <svg
               fill='currentColor'
