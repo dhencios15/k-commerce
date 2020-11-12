@@ -2,6 +2,7 @@ import useCart from 'hooks/useCart';
 import { LeftArrowIcon, RightArrowIcon } from 'icons';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
+import { displayMoney } from 'utils/textDisplay';
 
 const CartItems = ({ cartItems }) => {
   const { incQty, decQty, removeItemFromCart } = useCart();
@@ -52,7 +53,7 @@ const CartItems = ({ cartItems }) => {
             </td>
             <td className='text-center'>
               <span className='text-sm lg:text-base font-medium select-none'>
-                {item.price}
+                {displayMoney(item.price)}
               </span>
             </td>
           </tr>
