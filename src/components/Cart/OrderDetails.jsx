@@ -1,6 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { selectCurrentUser } from 'store/selector/authSelector';
+import { displayMoney } from 'utils/textDisplay';
 
 const OrderDetails = ({ totalPrice }) => {
   const currentUser = useSelector((state) => selectCurrentUser(state));
@@ -18,7 +19,7 @@ const OrderDetails = ({ totalPrice }) => {
                 Subtotal
               </div>
               <div className='lg:px-4 lg:py-2 m-2 lg:text-sm font-bold text-center text-gray-900'>
-                {totalPrice}
+                {displayMoney(totalPrice)}
               </div>
             </div>
             <div className='flex justify-between pt-4 border-b'>
@@ -34,7 +35,7 @@ const OrderDetails = ({ totalPrice }) => {
                 Total
               </div>
               <div className='lg:px-4 lg:py-2 m-2 lg:text-sm font-bold text-center text-gray-900'>
-                {totalPrice}
+                {displayMoney(totalPrice)}
               </div>
             </div>
             <Link to={currentUser ? '/' : '/signin'}>
