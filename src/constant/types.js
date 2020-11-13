@@ -7,3 +7,8 @@ export const IS_AUTHENTICATING = 'IS_AUTHENTICATING';
 export const SIGN_UP = 'SIGN_UP';
 export const SIGN_UP_SUCCESS = 'SIGN_UP_SUCCESS';
 export const AUTH_ERROR = 'AUTH_ERROR';
+
+//CART
+export const ADD_TO_CART = 'ADD_TO_CART';
+export const REMOVE_ITEM = 'REMOVE_ITEM';
+export const CLEAR_ITEM_FROM_CART = 'CLEAR_ITEM_FROM_CART';

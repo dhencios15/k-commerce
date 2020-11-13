@@ -13,7 +13,7 @@ const middlewares = [sagaMiddleware];
 const authPersistConfig = {
   key: 'root',
   storage,
-  whitelist: ['auth'],
+  whitelist: ['auth', 'cart'],
 };
 
 export const store = createStore(
