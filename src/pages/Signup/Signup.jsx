@@ -37,7 +37,7 @@ const Signup = () => {
         <div className="rounded-lg shadow-lg px-10 py-5">
           <div className="flex flex-col mb-6">
             <h1 className="font-bold text-xl tracking-wider text-center">
-              SIGNIN
+              SIGNUP
             </h1>
             {error && <p className="text-red-500 text-center">{error}</p>}
           </div>
